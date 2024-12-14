@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Enabling Community Repository..."
-doas echo "http://dl-cdn.alpinelinux.org/alpine/v3.21/community" >> /etc/apk/repositories
+su -c 'echo "http://dl-cdn.alpinelinux.org/alpine/v3.21/community" >> /etc/apk/repositories'
 
 doas apk update
 doas apk add docker
